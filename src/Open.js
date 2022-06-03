@@ -5,16 +5,19 @@ function Open({ socket, open, setOpen, inProcess, setInProcess, completed }) {
   const [count, setCount] = useState(0);
   const data = useRef();
   function insertTask() {
-    let num = count;
-    setCount(count + 1);
-    setOpen([...open, [num, data.current.value]]);
-    socket.emit("send", {
-      open: [...open, [count, data.current.value]],
-      inProcess,
-      completed,
-      room: 1,
-    });
-    data.current.value = "";
+    let task = data.current.value;
+    if (task != "") {
+      let num = count;
+      setCount(count + 1);
+      setOpen([...open, [num, task]]);
+      socket.emit("send", {
+        open: [...open, [count, task]],
+        inProcess,
+        completed,
+        room: 1,
+      });
+      data.current.value = "";
+    }
   }
   async function moveTask(e) {
     let id = Number(e.target.dataset.id);
