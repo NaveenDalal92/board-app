@@ -5,7 +5,7 @@ import Open from "./Open";
 import InProgress from "./InProgress";
 import Completed from "./Completed";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("http://13.126.119.13:3001");
 
 function App() {
   const [open, setOpen] = useState([]);
