@@ -1,7 +1,7 @@
 .completed {
     border-width: 1px;
     border-color: black;
-    border-style: solid;
+    border-style: solid; 
     padding: 2px;
     width: 300px;
     height: 600px;

@@ -1,7 +1,7 @@
 .head{
   display: flex;
   flex-direction: column;
-}
+} 
 .tasks{
   display: flex;
   flex-direction: row;
