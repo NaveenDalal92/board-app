@@ -1,0 +1,20 @@
+.open {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 2px;
+    width: 300px;
+    position: relative;
+}
+
+.task{
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+.input{
+        position: absolute;
+            bottom: 0;
+}
